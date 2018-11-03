@@ -13,6 +13,8 @@ package com.backcountrydesigngroup.android.inventoryapp;
         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
         See the License for the specific language governing permissions and
         limitations under the License.
+
+        Code originates from https://github.com/udacity/ud845-Pets
         */
 
 import android.content.ContentValues;
