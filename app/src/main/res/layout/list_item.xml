@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/number_text_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/number_square"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/location_text_offset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.7">
+
+        <TextView
+            android:id="@+id/product_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            tools:text="Product Name Goes Here" />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="12sp"
+            tools:text="@string/no_date_provided_error" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/sale_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.3"
+        android:text="SALE"/>
+    </LinearLayout>
+
+</LinearLayout>
