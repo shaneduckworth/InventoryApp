@@ -1,4 +1,4 @@
-package com.backcountrydesigngroup.android.inventoryapp;
+package com.backcountrydesigngroup.android.inventoryapp.data;
 
 /** Copyright (C) 2016 The Android Open Source Project
 
@@ -20,7 +20,7 @@ package com.backcountrydesigngroup.android.inventoryapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.backcountrydesigngroup.android.inventoryapp.InventoryContract.InventoryDB;
+import com.backcountrydesigngroup.android.inventoryapp.data.InventoryContract.InventoryDB;
 
 // Class initiates, updates, and versions the SQLite DB
 public class InventoryDbHelper extends SQLiteOpenHelper {

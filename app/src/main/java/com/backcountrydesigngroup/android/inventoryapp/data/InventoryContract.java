@@ -1,4 +1,4 @@
-package com.backcountrydesigngroup.android.inventoryapp;
+package com.backcountrydesigngroup.android.inventoryapp.data;
 
 /** Copyright (C) 2016 The Android Open Source Project
 
@@ -17,6 +17,8 @@ package com.backcountrydesigngroup.android.inventoryapp;
         Code originates from https://github.com/udacity/ud845-Pets
         */
 
+import android.content.ContentResolver;
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 public class InventoryContract {
@@ -25,11 +27,30 @@ public class InventoryContract {
     private InventoryContract() {
     }
 
+    public static final String CONTENT_AUTHORITY = "com.backcountrydesigngroup.android.inventoryapp";
+    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+    public static final String PATH_INVENTORY = "inventory";
+
     // Inner class - definitions for database setup
     public static final class InventoryDB implements BaseColumns {
 
+        // URI
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_INVENTORY);
+
         // Table name
         public final static String TABLE_NAME = "inventory";
+
+        /**
+         * The MIME type of the {@link #CONTENT_URI} for a list of inventory items.
+         */
+        public static final String CONTENT_LIST_TYPE =
+                ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_INVENTORY;
+
+        /**
+         * The MIME type of the {@link #CONTENT_URI} for a single inventory item.
+         */
+        public static final String CONTENT_ITEM_TYPE =
+                ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_INVENTORY;
 
         // Unique ID
         public final static String _ID = BaseColumns._ID;
